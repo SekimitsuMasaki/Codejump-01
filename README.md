@@ -39,5 +39,5 @@ git clone git@github.com:ユーザー名/リポジトリ名.git
 ***
 
 
-📝 進め方
+📝 進め方  
 Codejumpで仕様などを確認したうえでデザインカンプを見ながらHTML/CSSで模写
