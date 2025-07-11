@@ -1,0 +1,212 @@
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* 画像サイズによっては要素をはみ出して表示されるのでwidth:100%で親要素に合わせる */
+img {
+    width: 100%;
+}
+
+body {
+    /* サイト全体の背景色 */
+    background: #f0f0f0;
+    /* フォント指定（Hiraginoの代用でZenkaku） */
+    font-family: "Zen Kaku Gothic New", sans-serif;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .header__left {
+    display: flex;
+    align-items: center;
+}
+.header .header__left__logo {
+    margin: 0 60px 0 100px;
+}
+.header .header__left nav ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+.header .header__left nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+.header .header__right {
+    display: block;
+    height: 100%;
+    line-height: 80px;
+    padding: 0 64px;
+    text-decoration: none;
+    background: #000;
+    color: #fff;
+    font-size: 12px;
+}
+
+/* セクションタイトル（共通） */
+.sec-title__main {
+    font-size: 36px;
+    line-height: 1;
+    letter-spacing: 0.3em;
+    margin: 0 0 10px 0;
+    font-weight: normal;
+}
+.sec-title__sub {
+    font-size: 14px;
+}
+.sec-title {
+    position: relative;
+    padding: 0 0 36px;
+}
+.sec-title::after {
+    content: "";
+    width: 40px;
+    height: 1px;
+    background: #000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* セクションコンテナ（共通） */
+.sec-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* mvセクションcss */
+.top__mv {
+    width: 100vw;
+    height: calc(100vh - 80px);
+    background: url(./img/mainvisual.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/*   top__news   */
+
+/* newsセクションcss */
+.top__news {
+    padding: 120px 20px;
+}
+
+.top__news__container {
+    margin: 50px auto 0;
+    display: flex;
+}
+.top__news__container__item {
+    width: calc(100% / 3);
+    border-right: 1px solid #000;
+    padding: 10px 20px;
+}
+/* ３倍の個数の時に右枠線を消す */
+.top__news__container__item:nth-of-type(3n) {
+    border-right: none;
+}
+
+/* newsの記事にnewsもしくはpressのタグを表示 */
+.top__news__container__item.news-tag .item__date::after {
+    content: "NEWS";
+    padding: 0 4px;
+    background: #000;
+    color: #fff;
+    margin: 0 0 0 10px;
+}
+.top__news__container__item.press-tag .item__date::after {
+    content: "PRESS";
+    padding: 0 4px;
+    background: #000;
+    color: #fff;
+    margin: 0 0 0 10px;
+}
+
+
+/*   top__about   */
+
+.top__about {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 70px;
+    padding: 0 0 120px;
+}
+
+.top__about__image {
+    /* width: calc(60% - 35px); */
+    width: 60%;
+}
+.top__about__image img {
+    /* 画像下の小さい余白を消すためのdisplay:block */
+    display: block;
+    margin: 0 0 120px;
+}
+
+.top__about__text {
+    /* width: calc(40% - 35px); */
+    width: 40%;
+    padding: 0 70px 0 0;
+}
+.top__about__desc {
+    margin: 50px 0 0;
+}
+
+
+/*   top__business   */
+
+.top__business {
+    padding: 0 20px 120px;
+}
+
+.top__business__container {
+    padding: 50px 116px 0;
+    display: flex;
+    gap: 64px;
+}
+
+.top__business__container__wrapper:first-of-type {
+    padding: 100px 0 0 0;
+}
+
+.top__business__container__item {
+    margin: 0 0 50px;
+}
+/* itemの最後の要素の余白を消す */
+.top__business__container__item:last-of-type {
+    margin: 0;
+}
+
+.top__business__title {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    padding: 0 0 0 18px;
+    position: relative;
+}
+.top__business__title::before {
+    content: "";
+    width: 8px;
+    height: 1px;
+    background: #000;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+}
+
+.top__business__image {
+    display: block;
+}
