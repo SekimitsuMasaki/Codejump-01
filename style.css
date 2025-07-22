@@ -210,3 +210,43 @@ body {
 .top__business__image {
     display: block;
 }
+
+
+/* Companyセクション */
+.top__company {
+    display: flex;
+    align-items: center;
+}
+
+.top__company__info {
+    background: #fff;
+    margin: 0 -80px 0 0;
+    padding: 100px 100px 100px 62px;
+}
+
+.top__company dl {
+    margin: 50px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    font-size: 14px;
+}
+.top__company dt {
+    width: 85px;
+    /* 収縮割合 */
+    flex-shrink: 0;
+}
+.top__company dd {
+    width: calc(100% - 85px);
+    margin: 0;
+}
+
+.top__company dd p {
+    margin: 0 0 10px;
+}
+
+.top__company__image {
+    width: 55%;
+    height: 400px;
+    object-fit: cover;
+}
